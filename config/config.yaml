@@ -5,6 +5,5 @@ samples:
 genome: "data/genome.fa"
 readdir: "data"
 outdir: "output"
-bamdir: "output/aligned"
 qcdir: "output/qc"
 logdir: "output/logs"
