@@ -1,0 +1,15 @@
+# Use os.path for windows support and to prevent accidentally missing directory separators
+import os
+
+# Read in config file (path is relative to working directory)
+configfile: os.path.join("config", "config.yaml")
+
+# Add any rules files (path is relative to Snakefile)
+include: os.path.join("rules", "mapping.smk")
+include: os.path.join("rules", "preprocessing.smk")
+include: os.path.join("rules", "report.smk")
+
+# Declare the target file for the pipeline
+rule all:
+    input:
+        os.path.join(config["outdir"], "multiqc_report.html")
