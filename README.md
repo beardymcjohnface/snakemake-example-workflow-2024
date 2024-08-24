@@ -2,6 +2,15 @@
 
 The Snakemake workflow is based off the example bash script at the bottom.
 
+## Environment
+
+Install with conda
+
+```shell
+conda create -n snakemake snakemake fastp samtools minimap2 multiqc
+```
+
+## Bash script version
 
 ```shell
 #!/usr/bin/bash
